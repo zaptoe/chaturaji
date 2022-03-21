@@ -47,6 +47,41 @@ inline void fatal(std::string msg) {
   std::exit(1);
 }
 
+inline int _popCount(U64 board) {
+  return __builtin_popcountll(board);
+}
+
+inline int _bitscanReverse(U64 board) {
+  if (board == ZERO) {
+    return -1;
+  }
+  return 63 - __builtin_clzll(board);
+}
+
+inline U64 _eastN(U64 board, int n) {
+  U64 newBoard = board;
+  for (int i = 0; i < n; i++) {
+    newBoard = ((newBoard << 1) & (~FILE_A));
+  }
+  return newBoard;
+}
+
+inline U64 _westN(U64 board, int n) {
+  U64 newBoard = board;
+  for (int i = 0; i < n; i++) {
+    newBoard = ((newBoard >> 1) & (~FILE_H));
+  }
+  return newBoard;
+}
+
+inline int _row(int square) {
+  return square / 8;
+}
+
+inline int _col(int square) {
+  return square % 8;
+}
+
 enum SquareIndex {
   a1, b1, c1, d1, e1, f1, g1, h1,
   a2, b2, c2, d2, e2, f2, g2, h2,
