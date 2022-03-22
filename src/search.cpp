@@ -1,6 +1,5 @@
 #include <ctime>
 #include "defs.h"
-#include "evaluation.cpp"
 
 Search::Search(Evaluation evaluation)
 {
