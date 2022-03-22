@@ -9,5 +9,5 @@ struct Entry {
 class Evaluation
 {
   public:
-	Value getEval(Board board, Move lastMove);
+    Value getEval(Board board, Move lastMove);
 };
