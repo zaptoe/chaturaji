@@ -1,6 +1,5 @@
 #pragma once
 #include <ctime>
-#include "defs.h"
 
 enum Flag { UPPER, LOWER, EXACT };
 
