@@ -1,6 +1,7 @@
 #pragma once
 #include <limits>
 #include <string>
+#include "thread.h"
 #include "board.h"
 #include "evaluation.h"
 #include "search.h"
