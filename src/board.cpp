@@ -2,8 +2,16 @@
 #include <vector>
 #include "defs.h"
 
-std::vector<Move> generateValidMoves(Color color) {
+std::vector<Move> Board::generateValidMoves(Color color) {
   std::vector<Move> validMoves;
+  std::vector<Move> moves;
+  
+  for (const int& validMove : moves) {
+    if (Board::causesCheck(validMove)) {
+      validMoves.push_back(validmove);
+    }
+  }
+  return validMoves;
 }
 
 bool Board::inCheck() {
